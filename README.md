@@ -1,3 +1,4 @@
 # demo_app
 
-![Screenshot_1678376642](https://user-images.githubusercontent.com/73125381/224076727-e12b3ba4-45ba-4b0f-9562-f8861f018c28.png)
+
+![Screenshot_1678380123](https://user-images.githubusercontent.com/73125381/224092540-4e253236-7d59-4beb-b235-9b1f75466a61.png)
