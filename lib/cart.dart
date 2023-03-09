@@ -27,6 +27,7 @@ class Cart extends StatelessWidget {
           Icon(
             icon,
             size: 40,
+            color: Colors.green,
           ),
           SizedBox(width: 20),
           Column(
@@ -66,7 +67,7 @@ class Cart extends StatelessWidget {
           Icon(
             Icons.chevron_right,
             size: 30,
-            color: Colors.white,
+            color: Colors.green,
           ),
         ],
       ),
