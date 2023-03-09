@@ -56,7 +56,7 @@ class Cart extends StatelessWidget {
               Text(
                 subDis ?? "",
                 style: TextStyle(
-                  color: Color.fromARGB(255, 94, 69, 192),
+                  color: Color.fromRGBO(235, 236, 236, 100),
                   fontSize: 10,
                 ),
               ),
