@@ -2,6 +2,7 @@ import 'package:demo_app/cart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HelpCentre extends StatefulWidget {
   const HelpCentre({super.key});
@@ -20,17 +21,20 @@ class _HelpCentreState extends State<HelpCentre> {
             color: Colors.black,
             height: double.infinity,
             width: double.infinity,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
+            child: ListView(
+              //mainAxisAlignment: MainAxisAlignment.start,
+              //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  height: 250,
+                  height: 300,
                   width: double.infinity,
-                  color: Color.fromARGB(255, 43, 7, 84),
+                  color: Color.fromRGBO(57, 48, 70, 100),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      SizedBox(
+                        height: 10,
+                      ),
                       GestureDetector(
                         child: Icon(
                           Icons.chevron_left,
@@ -66,12 +70,14 @@ class _HelpCentreState extends State<HelpCentre> {
                       SizedBox(
                         height: 50,
                       ),
-                      Align(
-                        //height: 100,
-                        // width: 100,
-                        child: Text(
-                          "Space for the image",
-                          style: TextStyle(color: Colors.white),
+                      Center(
+                        child: Container(
+                          height: 100,
+                          width: 150,
+                          child: Image.asset(
+                            "assets/images/chat.png",
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ],
@@ -91,9 +97,9 @@ class _HelpCentreState extends State<HelpCentre> {
                     SizedBox(
                       width: 5,
                     ),
-                    Icon(
-                      Icons.handshake,
-                      color: Colors.white,
+                    SvgPicture.asset(
+                      "assets/images/Emoji.svg",
+                      color: Colors.yellow,
                     ),
                   ],
                 ),
@@ -113,17 +119,21 @@ class _HelpCentreState extends State<HelpCentre> {
                   style: TextStyle(color: Colors.white, fontSize: 12),
                   textAlign: TextAlign.center,
                 ),
-                Cart(Icons.headphones, "Chat",
+                SizedBox(
+                  height: 10,
+                ),
+                Cart("assets/images/headphone.svg", "Chat",
                     "start a coversation right away!", "response time: 5 mins"),
                 SizedBox(
                   height: 10,
                 ),
-                Cart(Icons.message, "FAQs", "Find answers quickly", ""),
+                Cart("assets/images/message-notif.svg", "FAQs",
+                    "Find answers quickly", ""),
                 SizedBox(
                   height: 10,
                 ),
-                Cart(Icons.email, "Email us", "Get solutions in your inbox!",
-                    ""),
+                Cart("assets/images/sms-search.svg", "Email us",
+                    "Get solutions in your inbox!", ""),
               ],
             ),
           ),

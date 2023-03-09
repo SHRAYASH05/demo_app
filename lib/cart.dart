@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Cart extends StatelessWidget {
-  IconData icon;
+  String icon;
   String heading;
   String discription;
   String? subDis;
@@ -17,17 +18,15 @@ class Cart extends StatelessWidget {
       height: 100,
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 43, 7, 84),
+        color: Color.fromRGBO(57, 48, 70, 100),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Icon(
+          SvgPicture.asset(
             icon,
-            size: 40,
-            color: Colors.green,
           ),
           SizedBox(width: 20),
           Column(
